@@ -23,7 +23,7 @@ a promise to fired after domReady and your deps loaded
 ####setBaseDir
 require.setBaseDir({dirname});
 
-###adivice: read the source codes, I think you will quickly hold the idea of mine and grasp the methods.
+#####adivice: read the source codes, I think you will quickly hold the idea of mine and grasp the methods.
 
 
 
