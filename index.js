@@ -1060,12 +1060,11 @@ _.extend(Module, {
 		}
 		else {
 			req = mod.require.bind(mod);
-			if (deps) {
+
+			if (deps || mod.addRequire) {
+				deps = deps || [];
 				deps = mod.addRequire ? [req].concat(deps) : deps;
 				mod.exports = factory.apply(null, deps);
-			}
-			else if (mod.addRequire) {
-				mod.exports = factory(req);
 			}
 			else {
 				mod.exports = exports = {};
